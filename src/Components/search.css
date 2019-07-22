@@ -1,0 +1,23 @@
+.search-container {
+    display: flex;
+    height: 1000px;
+    background-color: lightgreen;
+}
+
+.search {
+    width: 15%;
+    height: 100%;
+    background-color: lightcoral;
+}
+
+.laptops {
+    width: 70%;
+    height: 100%;
+    background-color: lightblue;
+}
+
+.compare {
+    width: 15%;
+    height: 100%;
+    background-color: lightyellow;
+}

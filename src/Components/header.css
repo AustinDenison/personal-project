@@ -1,0 +1,7 @@
+.header {
+    height: 50px;
+    background-color: grey;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+}

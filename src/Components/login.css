@@ -1,0 +1,10 @@
+.login {
+    width: 200px;
+    height: 400px;
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 25%;
+    left: 45%;
+}
