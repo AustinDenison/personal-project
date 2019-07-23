@@ -4,6 +4,7 @@ const massive = require('massive')
 const session = require('express-session')
 const initSession = require('./middleware/initSession')
 const uc = require('./controllers/userController')
+const lc = require('./controllers/laptopController')
 const {CONNECTION_STRING, SESSION_SECRET, SERVER_PORT} = process.env
 
 const app = express()
@@ -22,6 +23,9 @@ app.use(initSession)
 
 app.post('/api/login', uc.login)
 app.post('/api/signup', uc.signup)
+
+app.get('/api/laptops', lc.getAll)
+app.get('/api/laptops', lc.search)
 
 massive(CONNECTION_STRING).then(db => {
     app.set('db', db)
