@@ -1,11 +1,19 @@
 import axios from 'axios'
-import {LOGIN, SIGNUP, SET_LAPTOPS} from './actionTypes'
+import {LOGIN, SIGNUP, SET_LAPTOPS, FILTERED_LAPTOP} from './actionTypes'
 
 const initialState = {
     user: {},
     redirect: false,
     error: false,
-    laptops: []
+    laptops: [],
+    queries: []
+}
+
+export const filteredLaptop = (queries) => {
+    return {
+        type: FILTERED_LAPTOP,
+        payload: queries
+    }
 }
 
 export const setLaptops = (laptops) => {
@@ -43,10 +51,9 @@ export default function(state = initialState, action){
         case SIGNUP + '_REJECTED':
             return {...state, error: payload}
         case SET_LAPTOPS:
-            return {
-                ...state, 
-                laptops: payload
-            }
+            return {...state, laptops: payload}
+        case FILTERED_LAPTOP:
+            return {...state, queries: payload}
         default:
          return state
     }

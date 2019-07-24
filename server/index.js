@@ -25,7 +25,7 @@ app.post('/api/login', uc.login)
 app.post('/api/signup', uc.signup)
 
 app.get('/api/laptops', lc.getAll)
-app.get('/api/laptops', lc.search)
+// app.get('/api/laptops', lc.search)
 
 massive(CONNECTION_STRING).then(db => {
     app.set('db', db)
