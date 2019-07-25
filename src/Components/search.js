@@ -46,6 +46,9 @@ class Search extends Component {
   };
 
   render() {
+    this.props.compare.map(compare => {
+      const {model, display, processor, video_card, memory, storage, battery, weight, price, image} = compare
+    })
     return (
       <div className="search-container">
         <div className="search">
@@ -100,7 +103,10 @@ class Search extends Component {
                 return <FilteredLaptop queries={laptop} key={laptop.laptop_id} />;
               })}
         </div>
-        <div className="compare" />
+        <div className="compare" >
+          <h3>Compare</h3>
+          <p></p>
+        </div>
       </div>
     );
   }

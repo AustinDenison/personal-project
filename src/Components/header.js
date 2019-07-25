@@ -41,7 +41,7 @@ class Header extends Component {
   render() {
     return (
       <div className="header">
-        <Link to="/frontPage">Logo</Link>
+        <Link to="/">Logo</Link>
         <Link to="/search">Search</Link>
         <Link to="/cart">Cart</Link>
         {

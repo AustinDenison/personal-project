@@ -1,7 +1,14 @@
 import React, {Component} from 'react'
 import './laptop.css'
+import { connect } from "react-redux";
+import {compareLaptop} from '../redux/userReducer'
 
 class Laptop extends Component {
+
+    handleCompare = (laptop) => {
+        this.props.compareLaptop(laptop)    
+    }
+
     render(){
         const {model, display, processor, video_card, memory, storage, battery, weight, price, image} = this.props.laptop
         return(
@@ -16,9 +23,14 @@ class Laptop extends Component {
                 <p>Battery: {battery}</p>
                 <p>Weight: {weight}</p> */}
                 <p className='price'>${price}</p>
+                <button onClick={() => this.handleCompare(this.props.laptop)}>Compare</button>
             </div>
         )
     }
 }
 
-export default Laptop
+function mapStateToProps(state) {
+    return state.user;
+  }
+
+export default connect(mapStateToProps, {compareLaptop})(Laptop)
