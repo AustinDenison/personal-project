@@ -41,15 +41,15 @@ class Header extends Component {
   render() {
     return (
       <div className="header">
-        <Link to="/">Logo</Link>
-        <Link to="/search">Search</Link>
-        <Link to="/cart">Cart</Link>
+        <Link className='logo-link' to="/">Logo</Link>
+        <Link className='search-link' to="/search">Search</Link>
+        <Link className='cart-link' to="/cart">Cart</Link>
         {
           this.props.user.username
           ?
           <p>{this.props.user.username}</p>
           :
-          <button onClick={() => this.handleLogin()}>Login</button>
+          <button className='login-btn' onClick={() => this.handleLogin()}>Login</button>
         }
         {this.state.displayLogin ? (
           <Login handleSignup={this.handleSignup} loseLogin={this.loseLogin} />

@@ -4,7 +4,11 @@ import axios from "axios";
 import Laptop from "./laptop";
 import FilteredLaptop from "./filteredLaptop";
 import { connect } from "react-redux";
-import { setLaptops, filteredLaptop } from "../redux/userReducer";
+import { setLaptops, filteredLaptop, toggleCompare } from "../redux/userReducer";
+import Compare from './compare'
+import ComparedLaptops from './comparedLaptops'
+import './compare.css'
+
 
 class Search extends Component {
   constructor() {
@@ -45,10 +49,27 @@ class Search extends Component {
     });
   };
 
+  displayCompare = () => {
+    this.props.toggleCompare()
+  }
+
   render() {
-    this.props.compare.map(compare => {
-      const {model, display, processor, video_card, memory, storage, battery, weight, price, image} = compare
-    })
+    let display = []
+    if(this.props.displayCompare === false && this.props.queries.length === 0){
+      display = this.props.laptops.map(laptop => {
+        return <Laptop laptop={laptop} key={laptop.laptop_id} />;
+      })
+    } else if(this.props.displayCompare === true){
+      display = this.props.compare.map(compare => {
+        return <ComparedLaptops compare={compare}/>
+      })
+    } else {
+      display = this.props.queries.map(laptop => {
+         return (
+           <FilteredLaptop queries={laptop} key={laptop.laptop_id} />
+         );
+       })
+    }
     return (
       <div className="search-container">
         <div className="search">
@@ -83,7 +104,15 @@ class Search extends Component {
             <option>17-18 inches</option>
           </select>
           <p>Processor</p>
-          <select />
+          <select defaultValue='Choose Processor'>
+            <option disabled>Choose Processor</option>
+            <option>Intel Core i3</option>
+            <option>Intel Core i5</option>
+            <option>Intel Core i7</option>
+            <option>Intel Core i9</option>
+            <option>Ryzen 5</option>
+            <option>Ryzen 7</option>
+          </select>
           <p>Video Card</p>
           <select />
           <p>Memory</p>
@@ -95,17 +124,16 @@ class Search extends Component {
           <button onClick={this.filter}>Filter</button>
         </div>
         <div className="laptops">
-          {this.props.queries.length === 0
-            ? this.props.laptops.map(laptop => {
-                return <Laptop laptop={laptop} key={laptop.laptop_id} />;
-              })
-            : this.props.queries.map(laptop => {
-                return <FilteredLaptop queries={laptop} key={laptop.laptop_id} />;
-              })}
+          {display}
         </div>
-        <div className="compare" >
+        <div className="compare">
           <h3>Compare</h3>
-          <p></p>
+          <div>
+            {this.props.compare.map(compare => {
+              return <Compare compare={compare} />
+            })}
+          </div>
+          <button className='toggle-compare' onClick={() => this.displayCompare()}>Compare Toggle</button>
         </div>
       </div>
     );
@@ -118,5 +146,5 @@ function mapStateToProps(state) {
 
 export default connect(
   mapStateToProps,
-  { setLaptops, filteredLaptop }
+  { setLaptops, filteredLaptop, toggleCompare }
 )(Search);

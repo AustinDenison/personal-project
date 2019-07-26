@@ -1,7 +1,37 @@
 .header {
-    height: 50px;
+    height: 80px;
     background-color: grey;
     display: flex;
     justify-content: space-around;
     color: white;
+    align-items: center;
+    border-bottom: solid black
+}
+
+.logo-link {
+    font-size: 30px;
+    text-decoration: none;
+    color: white
+}
+
+.search-link {
+    font-size: 25px;
+    text-decoration: none;
+    color: white
+}
+
+.cart-link {
+    font-size: 25px;
+    text-decoration: none;
+    color: white
+}
+
+.login-btn {
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+    color: white;
+    background-color: transparent;
+    border: none;
+    outline: none;
 }

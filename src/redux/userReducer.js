@@ -1,5 +1,5 @@
 import axios from 'axios'
-import {LOGIN, SIGNUP, SET_LAPTOPS, FILTERED_LAPTOP, COMPARE_LAPTOP} from './actionTypes'
+import {LOGIN, SIGNUP, SET_LAPTOPS, FILTERED_LAPTOP, COMPARE_LAPTOP, TOGGLE_COMPARE} from './actionTypes'
 
 const initialState = {
     user: {},
@@ -7,7 +7,13 @@ const initialState = {
     error: false,
     laptops: [],
     queries: [],
-    compare: []
+    compare: [],
+    displayCompare: false
+}
+export const toggleCompare = () => {
+    return {
+        type: TOGGLE_COMPARE
+    }
 }
 
 export const compareLaptop = (laptop) => {
@@ -63,7 +69,9 @@ export default function(state = initialState, action){
         case FILTERED_LAPTOP:
             return {...state, queries: payload}
         case COMPARE_LAPTOP:
-            return {...state, compare: payload}
+            return {...state, compare: [...state.compare, payload]}
+        case TOGGLE_COMPARE:
+            return {...state, displayCompare: !state.displayCompare}
         default:
          return state
     }

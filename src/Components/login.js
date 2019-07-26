@@ -39,7 +39,7 @@ class Login extends Component {
         console.log(this.props)
         return(
             <div className='login'>
-                <h4>Login</h4>
+                <h4 className='title-login'>Login</h4>
                 <input placeholder='username' onChange={e => this.handleUsername(e.target.value)} />
                 <input placeholder='password' onChange={e => this.handlePassword(e.target.value)} />
                 <button onClick={() => this.handleLogin()}>Login</button>
