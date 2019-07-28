@@ -13,17 +13,14 @@ class Laptop extends Component {
         const {model, display, processor, video_card, memory, storage, battery, weight, price, image} = this.props.laptop
         return(
             <div className='laptop-container'>
-                <img src={image} alt='item' className='laptopImage'></img>
+                <div className='image-container'>
+                <img  className='laptopImage' src={image} alt='item'></img>
+                </div>
+                <div className='spec'>
                 <h5>{model}</h5>
-                {/* <p>Display: {display}</p>
-                <p>Processor: {processor}</p>
-                <p>Video Card: {video_card}</p>
-                <p>Memory: {memory}</p>
-                <p>Storage: {storage}</p>
-                <p>Battery: {battery}</p>
-                <p>Weight: {weight}</p> */}
                 <p className='price'>${price}</p>
                 <button onClick={() => this.handleCompare(this.props.laptop)}>Compare</button>
+                </div>
             </div>
         )
     }

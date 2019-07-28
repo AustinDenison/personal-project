@@ -4,11 +4,14 @@ import axios from "axios";
 import Laptop from "./laptop";
 import FilteredLaptop from "./filteredLaptop";
 import { connect } from "react-redux";
-import { setLaptops, filteredLaptop, toggleCompare } from "../redux/userReducer";
-import Compare from './compare'
-import ComparedLaptops from './comparedLaptops'
-import './compare.css'
-
+import {
+  setLaptops,
+  filteredLaptop,
+  toggleCompare
+} from "../redux/userReducer";
+import Compare from "./compare";
+import ComparedLaptops from "./comparedLaptops";
+import "./compare.css";
 
 class Search extends Component {
   constructor() {
@@ -50,30 +53,30 @@ class Search extends Component {
   };
 
   displayCompare = () => {
-    this.props.toggleCompare()
-  }
+    this.props.toggleCompare();
+  };
 
   render() {
-    let display = []
-    if(this.props.displayCompare === false && this.props.queries.length === 0){
+    let display = [];
+    if (
+      this.props.displayCompare === false &&
+      this.props.queries.length === 0
+    ) {
       display = this.props.laptops.map(laptop => {
         return <Laptop laptop={laptop} key={laptop.laptop_id} />;
-      })
-    } else if(this.props.displayCompare === true){
+      });
+    } else if (this.props.displayCompare === true) {
       display = this.props.compare.map(compare => {
-        return <ComparedLaptops compare={compare}/>
-      })
+        return <ComparedLaptops compare={compare} />;
+      });
     } else {
       display = this.props.queries.map(laptop => {
-         return (
-           <FilteredLaptop queries={laptop} key={laptop.laptop_id} />
-         );
-       })
+        return <FilteredLaptop queries={laptop} key={laptop.laptop_id} />;
+      });
     }
     return (
       <div className="search-container">
         <div className="search">
-          <p>Brand</p>
           <select
             defaultValue="Choose Brand"
             name="brand"
@@ -91,7 +94,6 @@ class Search extends Component {
             <option>Huawei</option>
             <option>Apple</option>
           </select>
-          <p>Display</p>
           <select
             defaultValue="Choose Display"
             name="display"
@@ -103,8 +105,7 @@ class Search extends Component {
             <option>15-16 inches</option>
             <option>17-18 inches</option>
           </select>
-          <p>Processor</p>
-          <select defaultValue='Choose Processor'>
+          <select defaultValue="Choose Processor">
             <option disabled>Choose Processor</option>
             <option>Intel Core i3</option>
             <option>Intel Core i5</option>
@@ -113,27 +114,34 @@ class Search extends Component {
             <option>Ryzen 5</option>
             <option>Ryzen 7</option>
           </select>
-          <p>Video Card</p>
-          <select />
-          <p>Memory</p>
-          <select />
-          <p>Storage</p>
-          <select />
-          <p>Price</p>
-          <select />
+          <select defaultValue='Choose Video Card'>
+            <option disabled>Choose Video Card</option>
+          </select>
+          <select defaultValue='Choose Memory'>
+            <option disabled>Choose Memory</option>
+          </select>
+          <select defaultValue='Choose Storage'>
+            <option disabled>Choose Storage</option>
+          </select>
+          <select defaultValue='Choose Price'>
+            <option disabled>Choose Price</option>
+          </select>
           <button onClick={this.filter}>Filter</button>
         </div>
-        <div className="laptops">
-          {display}
-        </div>
+        <div className="laptops">{display}</div>
         <div className="compare">
           <h3>Compare</h3>
           <div>
             {this.props.compare.map(compare => {
-              return <Compare compare={compare} />
+              return <Compare compare={compare} />;
             })}
           </div>
-          <button className='toggle-compare' onClick={() => this.displayCompare()}>Compare Toggle</button>
+          <button
+            className="toggle-compare"
+            onClick={() => this.displayCompare()}
+          >
+            Compare Toggle
+          </button>
         </div>
       </div>
     );

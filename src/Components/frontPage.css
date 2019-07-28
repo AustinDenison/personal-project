@@ -1,6 +1,6 @@
 .frontPage {
     height: 1100px;
-    background: lightgreen;
+    background: #DEEAE4;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -21,7 +21,7 @@
 .article-container {
     width: 80%;
     height: 500px;
-    background-color: lightblue;
+    background-color: #DEC5E3;
     display: flex;
     justify-content: space-around;
     align-items: center;

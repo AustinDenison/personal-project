@@ -1,6 +1,6 @@
 .header {
     height: 80px;
-    background-color: grey;
+    background: #8DE0C3;
     display: flex;
     justify-content: space-around;
     color: white;
@@ -11,26 +11,26 @@
 .logo-link {
     font-size: 30px;
     text-decoration: none;
-    color: white
+    color: black;
 }
 
 .search-link {
     font-size: 25px;
     text-decoration: none;
-    color: white
+    color: black;
 }
 
 .cart-link {
     font-size: 25px;
     text-decoration: none;
-    color: white
+    color: black;
 }
 
 .login-btn {
     width: 100px;
     height: 40px;
     font-size: 20px;
-    color: white;
+    color: black;
     background-color: transparent;
     border: none;
     outline: none;

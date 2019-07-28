@@ -1,38 +1,53 @@
 .search-container {
     display: flex;
     height: 1000px;
-    background-color: lightgreen;
+    background-color: #DEEAE4;
 }
 
 .search {
     width: 15%;
-    height: 100%;
-    background-color: lightcoral;
+    height: 800px;
+    background: linear-gradient(to bottom right, #D1FAFF, #FCFFFC );
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    border-right: solid;
+    border: solid;
     border-radius: 10px;
+    margin-left: 1px;
+    margin-top: 10px;
+    align-items: center;
+}
+
+select {
+    background-color: #8DE0C3;
+    color: black;
+    border-radius: 20px;
+    border: none;
+    height: 40px;
+    outline: none;
+    width: 98%;
 }
 
 .laptops {
     width: 70%;
     height: 100%;
-    background-color: lightblue;
+    background-color: #DEEAE4;
     display: flex;
     justify-content: space-around;
 }
 
 .compare {
     width: 15%;
-    height: 100%;
-    background-color: lightyellow;
-    border-left: solid;
+    height: 300px;
+    background:linear-gradient(#DEC5E3, #FCFFFC );
+    border: solid;
     display: flex;
     flex-direction: column;
     border-radius: 10px;
+    margin-right: 1px;
+    margin-top: 10px;
 }
 
 .toggle-compare{
-    margin-top: 10px;
+    margin-top: 50px;
 }
