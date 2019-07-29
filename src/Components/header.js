@@ -4,6 +4,7 @@ import "./header.css";
 import Login from "./login";
 import Signup from "./signup";
 import { connect } from 'react-redux';
+import DropDown from './dropDown'
 
 class Header extends Component {
   constructor() {
@@ -11,7 +12,7 @@ class Header extends Component {
 
     this.state = {
       displayLogin: false,
-      displaySignup: false
+      displaySignup: false,
     };
   }
 
@@ -47,7 +48,7 @@ class Header extends Component {
         {
           this.props.user.username
           ?
-          <p>{this.props.user.username}</p>
+          <DropDown />
           :
           <button className='login-btn' onClick={() => this.handleLogin()}>Login</button>
         }

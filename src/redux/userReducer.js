@@ -1,5 +1,5 @@
 import axios from 'axios'
-import {LOGIN, SIGNUP, SET_LAPTOPS, FILTERED_LAPTOP, COMPARE_LAPTOP, TOGGLE_COMPARE} from './actionTypes'
+import {LOGIN, SIGNUP, SET_LAPTOPS, FILTERED_LAPTOP, COMPARE_LAPTOP, TOGGLE_COMPARE, LOGOUT, ADD_CART} from './actionTypes'
 
 const initialState = {
     user: {},
@@ -8,8 +8,24 @@ const initialState = {
     laptops: [],
     queries: [],
     compare: [],
-    displayCompare: false
+    displayCompare: false,
+    cart: []
 }
+
+export const addToCart = (laptop) => {
+    return {
+        type: ADD_CART,
+        payload: laptop
+    }
+}
+
+export const logout = () => {
+    return{
+        type: LOGOUT,
+        payload: axios.delete('/api/logout')
+    }
+  }
+
 export const toggleCompare = () => {
     return {
         type: TOGGLE_COMPARE
@@ -64,6 +80,8 @@ export default function(state = initialState, action){
             return {...state, redirect: false, user: payload, error: false}
         case SIGNUP + '_REJECTED':
             return {...state, error: payload}
+        case LOGOUT + '_FULFILLED':
+            return {...state, user: {}}
         case SET_LAPTOPS:
             return {...state, laptops: payload}
         case FILTERED_LAPTOP:
@@ -72,6 +90,8 @@ export default function(state = initialState, action){
             return {...state, compare: [...state.compare, payload]}
         case TOGGLE_COMPARE:
             return {...state, displayCompare: !state.displayCompare}
+        case ADD_CART:
+            return {...state, cart: [...state.cart, payload]}
         default:
          return state
     }

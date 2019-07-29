@@ -1,12 +1,16 @@
 import React, {Component} from 'react'
 import './laptop.css'
 import { connect } from "react-redux";
-import {compareLaptop} from '../redux/userReducer'
+import {compareLaptop, addToCart} from '../redux/userReducer'
 
 class Laptop extends Component {
 
     handleCompare = (laptop) => {
         this.props.compareLaptop(laptop)    
+    }
+
+    handleAdd = (laptop) => {
+        this.props.addToCart(laptop)
     }
 
     render(){
@@ -19,7 +23,10 @@ class Laptop extends Component {
                 <div className='spec'>
                 <h5>{model}</h5>
                 <p className='price'>${price}</p>
+                <div>
                 <button onClick={() => this.handleCompare(this.props.laptop)}>Compare</button>
+                <button onClick={() => this.handleAdd(this.props.laptop)}>Add To Cart</button>
+                </div>
                 </div>
             </div>
         )
@@ -30,4 +37,4 @@ function mapStateToProps(state) {
     return state.user;
   }
 
-export default connect(mapStateToProps, {compareLaptop})(Laptop)
+export default connect(mapStateToProps, {compareLaptop, addToCart})(Laptop)

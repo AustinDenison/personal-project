@@ -5,6 +5,7 @@ const session = require('express-session')
 const initSession = require('./middleware/initSession')
 const uc = require('./controllers/userController')
 const lc = require('./controllers/laptopController')
+const authCheck = require('./middleware/authCheck');
 const {CONNECTION_STRING, SESSION_SECRET, SERVER_PORT} = process.env
 
 const app = express()
@@ -14,18 +15,20 @@ app.use(express.json())
 app.use(
     session({
         secret: SESSION_SECRET,
-        saveUninitialized: false,
+        saveUninitialized: true,
         resave: false
     })
 )
 
 app.use(initSession)
+// app.use()
 
 app.post('/api/login', uc.login)
 app.post('/api/signup', uc.signup)
+app.delete('/api/logout', uc.logout)
 
 app.get('/api/laptops', lc.getAll)
-// app.get('/api/laptops', lc.search)
+
 
 massive(CONNECTION_STRING).then(db => {
     app.set('db', db)

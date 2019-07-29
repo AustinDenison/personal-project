@@ -1,13 +1,13 @@
 .search-container {
     display: flex;
     height: 1000px;
-    background-color: #DEEAE4;
+    background: linear-gradient(#FCFFFC, #D1FAFF );
 }
 
 .search {
     width: 15%;
     height: 800px;
-    background: linear-gradient(to bottom right, #D1FAFF, #FCFFFC );
+    background: linear-gradient(to bottom right, #D1FAFF, #8DE0C3 );
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -19,19 +19,20 @@
 }
 
 select {
-    background-color: #8DE0C3;
+    background: linear-gradient(to bottom right, #DEC5E3, #D1FAFF );
     color: black;
     border-radius: 20px;
     border: none;
     height: 40px;
     outline: none;
     width: 98%;
+    background-color: #D1FAFF;
 }
 
 .laptops {
     width: 70%;
     height: 100%;
-    background-color: #DEEAE4;
+    background: linear-gradient(#FCFFFC, #D1FAFF );
     display: flex;
     justify-content: space-around;
 }

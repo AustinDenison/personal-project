@@ -36,12 +36,11 @@ class Login extends Component {
     }
 
     render(){
-        console.log(this.props)
         return(
             <div className='login'>
                 <h4 className='title-login'>Login</h4>
                 <input placeholder='username' onChange={e => this.handleUsername(e.target.value)} />
-                <input placeholder='password' onChange={e => this.handlePassword(e.target.value)} />
+                <input placeholder='password' type='password' onChange={e => this.handlePassword(e.target.value)} />
                 <button onClick={() => this.handleLogin()}>Login</button>
                 <button onClick={() => this.handleSwitch()}>Signup</button>
             </div>

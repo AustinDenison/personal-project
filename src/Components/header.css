@@ -1,6 +1,6 @@
 .header {
     height: 80px;
-    background: #8DE0C3;
+    background: linear-gradient(to bottom right, #D1FAFF, #8DE0C3 );
     display: flex;
     justify-content: space-around;
     color: white;

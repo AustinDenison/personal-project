@@ -16,9 +16,9 @@ function FrontPage() {
     infinite: true,
     indicators: true,
     arrows: true,
-    onChange: (oldIndex, newIndex) => {
-      console.log(`slide transition from ${oldIndex} to ${newIndex}`);
-    }
+    // onChange: (oldIndex, newIndex) => {
+    //   console.log(`slide transition from ${oldIndex} to ${newIndex}`);
+    // }
   };
 
   const slideShow = () => {

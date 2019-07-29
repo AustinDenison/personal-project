@@ -23,3 +23,9 @@ create table cart (
     user_id integer references users (user_id) on delete cascade
     laptop_id integer references laptops (laptop_id)
 );
+
+create table cart-laptops (
+    cart_laptops_id serial primary key,
+    cart_id integer references users (user_id) on delete cascade
+    laptop_id integer references laptops (laptop_id)
+)
