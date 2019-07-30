@@ -16,17 +16,17 @@
 
 .item {
     background: linear-gradient(to right, white 30%, #D1FAFF);
-    width: 40%;
+    width: 100%;
     display: flex;
     align-items: center;
-    height: 150px;
+    height: 200px;
     border: solid 1px;
     margin-top: 50px;
     border-radius: 10px;
 }
 
 .img-container {
-    width: 300px;
+    width: 200px;
     height: 100%;
     background: white;
     display: flex;

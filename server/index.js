@@ -28,6 +28,8 @@ app.post('/api/signup', uc.signup)
 app.delete('/api/logout', uc.logout)
 
 app.get('/api/laptops', lc.getAll)
+app.post('/api/laptops', lc.addLaptop)
+app.delete('/api/laptops', lc.deleteItem)
 
 
 massive(CONNECTION_STRING).then(db => {

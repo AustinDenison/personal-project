@@ -23,5 +23,22 @@ module.exports = {
           console.log(err);
         });
     }
+  },
+  async addLaptop(req, res) {
+    const db = req.app.get("db");
+    let { cart_id } = req.session.user;
+    let { laptop_id } = req.body;
+
+    let userCart = await db.add_laptop(cart_id, laptop_id);
+    req.session.user.userCart = userCart;
+    res.status(200).send(userCart);
+  },
+  async deleteItem(req, res) {
+    const db = req.app.get("db")
+    let { laptop_id } = req.body
+
+    let userCart = await db.delete_item(laptop_id)
+    req.session.user.userCart = userCart
+    res.status(200).send(userCart)
   }
 };

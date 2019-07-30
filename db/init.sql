@@ -21,11 +21,10 @@ create table laptops (
 create table cart (
     cart_id serial primary key,
     user_id integer references users (user_id) on delete cascade
-    laptop_id integer references laptops (laptop_id)
 );
 
-create table cart-laptops (
+create table cart_laptops (
     cart_laptops_id serial primary key,
-    cart_id integer references users (user_id) on delete cascade
+    cart_id integer references cart (cart_id) on delete cascade,
     laptop_id integer references laptops (laptop_id)
-)
+);

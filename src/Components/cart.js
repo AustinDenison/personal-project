@@ -1,18 +1,21 @@
 import React, { Component } from "react";
 import "./cart.css";
 import { connect } from "react-redux";
+import {deleteItem} from '../redux/userReducer'
 
 class Cart extends Component {
 
-    handleDelete = () => {
-        this.props.cart.splice(1)
+    handleDelete = (laptop_id) => {
+      console.log('hit', laptop_id)
+        this.props.deleteItem(laptop_id)
     }
 
   render() {
+    console.log(this.props)
     return (
       <div className="cart">
         <div className="item-container">
-          {this.props.cart.map(item => {
+          {this.props.user.userCart.map(item => {
             return (
               <div className="item">
                 <div className="img-container">
@@ -21,7 +24,7 @@ class Cart extends Component {
                 <div className="item-info">
                   <h5>{item.model}</h5>
                   <p className="p">${item.price}</p>
-                  {/* <button onClick={this.handleDelete()}>Delete</button> */}
+                  <button onClick={() => this.handleDelete(item.laptop_id)}>Delete</button>
                 </div>
               </div>
             );
@@ -36,4 +39,4 @@ function mapStateToProps(state) {
   return state.user;
 }
 
-export default connect(mapStateToProps)(Cart);
+export default connect(mapStateToProps, {deleteItem})(Cart);

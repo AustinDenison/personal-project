@@ -1,21 +1,30 @@
 import axios from 'axios'
-import {LOGIN, SIGNUP, SET_LAPTOPS, FILTERED_LAPTOP, COMPARE_LAPTOP, TOGGLE_COMPARE, LOGOUT, ADD_CART} from './actionTypes'
+import {LOGIN, SIGNUP, SET_LAPTOPS, FILTERED_LAPTOP, COMPARE_LAPTOP, TOGGLE_COMPARE, LOGOUT, ADD_CART, DELETE_ITEM} from './actionTypes'
 
 const initialState = {
-    user: {},
+    user: {userCart: []},
     redirect: false,
     error: false,
     laptops: [],
     queries: [],
     compare: [],
-    displayCompare: false,
-    cart: []
+    displayCompare: false
+
 }
 
-export const addToCart = (laptop) => {
+export const deleteItem = (laptop_id) => {
+    let data = axios.delete('/api/laptops', {laptop_id}).then(res => res.data)
+    return {
+        type: DELETE_ITEM,
+        payload: data
+    }
+}
+
+export const addToCart =  (laptop_id) => {
+    let data =  axios.post('api/laptops', {laptop_id}).then(res => res.data)
     return {
         type: ADD_CART,
-        payload: laptop
+        payload: data
     }
 }
 
@@ -90,8 +99,10 @@ export default function(state = initialState, action){
             return {...state, compare: [...state.compare, payload]}
         case TOGGLE_COMPARE:
             return {...state, displayCompare: !state.displayCompare}
-        case ADD_CART:
-            return {...state, cart: [...state.cart, payload]}
+        case ADD_CART + '_FULFILLED':
+            return {...state, user: {...state.user, userCart: [...state.user.userCart, payload[0]]}}
+        case DELETE_ITEM + '_FULLFILLED':
+            return {...state, user: {...state.user, userCart: [...state.user.userCart] }}
         default:
          return state
     }
