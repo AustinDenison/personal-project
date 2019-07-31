@@ -1,0 +1,33 @@
+.frontPage {
+    height: 1100px;
+    background: #DEEAE4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.slider {
+    width: 800px;
+    height: 500px;
+    background-color: grey;
+}
+
+.img {
+    width: 800px;
+    height: 500px;
+}
+
+.article-container {
+    width: 80%;
+    height: 500px;
+    background-color: #DEC5E3;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.article {
+    width: 20%;
+    border: solid;
+}

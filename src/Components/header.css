@@ -1,0 +1,37 @@
+.header {
+    height: 80px;
+    background: linear-gradient(to bottom right, #D1FAFF, #8DE0C3 );
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    align-items: center;
+    border-bottom: solid black
+}
+
+.logo-link {
+    font-size: 30px;
+    text-decoration: none;
+    color: black;
+}
+
+.search-link {
+    font-size: 25px;
+    text-decoration: none;
+    color: black;
+}
+
+.cart-link {
+    font-size: 25px;
+    text-decoration: none;
+    color: black;
+}
+
+.login-btn {
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+    color: black;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
