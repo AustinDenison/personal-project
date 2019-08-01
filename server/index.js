@@ -21,15 +21,26 @@ app.use(
 )
 
 app.use(initSession)
+<<<<<<< HEAD
 // app.use()
+=======
+>>>>>>> 83a29f28b0cad2164bb26e8f9d2c40f2b9fd4685
 
 app.post('/api/login', uc.login)
 app.post('/api/signup', uc.signup)
 app.delete('/api/logout', uc.logout)
+<<<<<<< HEAD
 
 app.get('/api/laptops', lc.getAll)
 app.post('/api/laptops', lc.addLaptop)
 app.delete('/api/laptops', lc.deleteItem)
+=======
+app.put('/api/edituser', uc.editUser)
+
+app.get('/api/laptops', lc.getAll)
+app.post('/api/laptop', lc.addLaptop)
+app.post('/api/laptops/:laptop_id', lc.deleteItem)
+>>>>>>> 83a29f28b0cad2164bb26e8f9d2c40f2b9fd4685
 
 
 massive(CONNECTION_STRING).then(db => {

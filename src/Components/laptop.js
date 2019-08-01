@@ -2,7 +2,6 @@ import React, {Component} from 'react'
 import './laptop.css'
 import { connect } from "react-redux";
 import {compareLaptop, addToCart} from '../redux/userReducer'
-import axios from 'axios'
 
 class Laptop extends Component {
 
@@ -11,13 +10,11 @@ class Laptop extends Component {
     }
 
     handleAdd = (laptop_id) => {
-        
-            this.props.addToCart(laptop_id)
-        
+            this.props.addToCart(laptop_id, this.props.user.cart_id)
     }
 
     render() {
-        const {model, display, processor, video_card, memory, storage, battery, weight, price, image, laptop_id} = this.props.laptop
+        const {model, price, image, laptop_id} = this.props.laptop
         return(
             <div className='laptop-container'>
                 <div className='image-container'>

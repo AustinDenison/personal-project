@@ -26,19 +26,32 @@ module.exports = {
   },
   async addLaptop(req, res) {
     const db = req.app.get("db");
+<<<<<<< HEAD
     let { cart_id } = req.session.user;
     let { laptop_id } = req.body;
 
     let userCart = await db.add_laptop(cart_id, laptop_id);
     req.session.user.userCart = userCart;
+=======
+    let { laptop_id, cart_id } = req.body;
+    
+    let userCart = await db.add_laptop_to_cart(cart_id, laptop_id);
+>>>>>>> 83a29f28b0cad2164bb26e8f9d2c40f2b9fd4685
     res.status(200).send(userCart);
   },
   async deleteItem(req, res) {
     const db = req.app.get("db")
+<<<<<<< HEAD
     let { laptop_id } = req.body
 
     let userCart = await db.delete_item(laptop_id)
     req.session.user.userCart = userCart
+=======
+    let { laptop_id } = req.params
+    let {cart_id} = req.body
+
+    let userCart = await db.delete_item(laptop_id, cart_id)
+>>>>>>> 83a29f28b0cad2164bb26e8f9d2c40f2b9fd4685
     res.status(200).send(userCart)
   }
 };
