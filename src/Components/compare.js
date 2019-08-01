@@ -1,26 +1,23 @@
 import React, {Component} from 'react'
 import './compare.css'
 import { connect } from "react-redux";
+import {deleteCompare} from "../redux/userReducer"
 
 class Compare extends Component {
 
-    deleteCompare = () => {
-        this.props.compare.splice(1)
+    deleteCompare = (laptop_id) => {
+        this.props.deleteCompare(laptop_id)
     }
 
     render(){
-        const {model} = this.props.compare
+        const {model, laptop_id} = this.props.laptop
         return(
             <div className='mini-compare'>
                 {model}
-                <button onClick={this.deleteCompare}>x</button>
+                <button onClick={() => this.deleteCompare(laptop_id)}>x</button>
             </div>
         )
     }
 }
 
-function mapStateToProps(state) {
-    return state.user;
-  }
-
-export default connect(mapStateToProps)(Compare)
+export default connect(null, {deleteCompare})(Compare)

@@ -1,5 +1,5 @@
 import axios from 'axios'
-import {LOGIN, SIGNUP, SET_LAPTOPS, FILTERED_LAPTOP, COMPARE_LAPTOP, TOGGLE_COMPARE, LOGOUT, ADD_CART, DELETE_ITEM, EDIT_USER} from './actionTypes'
+import {LOGIN, SIGNUP, SET_LAPTOPS, FILTERED_LAPTOP, COMPARE_LAPTOP, TOGGLE_COMPARE, LOGOUT, ADD_CART, DELETE_ITEM, EDIT_USER, DELETE_COMPARE} from './actionTypes'
 
 const initialState = {
     user: {userCart: []},
@@ -10,6 +10,13 @@ const initialState = {
     compare: [],
     displayCompare: false
 
+}
+
+export const deleteCompare = (laptop_id) => {
+    return {
+        type: DELETE_COMPARE,
+        payload: laptop_id
+    }
 }
 
 export const editUser = (username, id) => {
@@ -98,7 +105,7 @@ export default function(state = initialState, action){
         case SIGNUP + '_REJECTED':
             return {...state, error: payload}
         case LOGOUT + '_FULFILLED':
-            return {...state, user: {}}
+            return {...state, ...initialState}
         case SET_LAPTOPS:
             return {...state, laptops: payload}
         case FILTERED_LAPTOP:
@@ -113,6 +120,8 @@ export default function(state = initialState, action){
             return {...state, user: {...state.user, userCart: payload }}
         case EDIT_USER + '_FULFILLED':
             return {...state, user: payload}
+        case DELETE_COMPARE:
+            return {...state, compare: state.compare.filter(laptop => laptop.laptop_id !== payload)}
         default:
          return state
     }

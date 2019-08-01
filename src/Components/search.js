@@ -66,7 +66,6 @@ class Search extends Component {
         return <Laptop laptop={laptop} key={laptop.laptop_id} />;
       });
     } else if (this.props.displayCompare === true) {
-      console.log(this.props.compare)
       display = this.props.compare.map(compare => {
         return <ComparedLaptops compare={compare} />;
       });
@@ -142,8 +141,8 @@ class Search extends Component {
         <div className="compare">
           <h3>Compare</h3>
           <div>
-            {this.props.compare.map(compare => {
-              return <Compare compare={compare} />;
+            {this.props.compare.map(laptop => {
+              return <Compare laptop={laptop} key={laptop.laptop_id} />;
             })}
           </div>
           <button
