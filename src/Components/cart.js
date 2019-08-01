@@ -5,9 +5,25 @@ import { deleteItem } from "../redux/userReducer";
 import Checkout from "./checkout";
 
 class Cart extends Component {
+  constructor(props){
+    super(props)
+
+    this.state = {
+      total: props.user.userCart.reduce((prev, curr) => curr.price + prev, 0)
+    }
+  }
+
   handleDelete = laptop_id => {
     this.props.deleteItem(laptop_id, this.props.user.cart_id);
   };
+
+  componentDidUpdate = (prevProps, prevState) => {
+    if(prevProps.user.userCart.length !== this.props.user.userCart.length){
+      this.setState({
+        total: this.props.user.userCart.reduce((prev, curr) => curr.price + prev, 0)
+      })
+    }
+  }
 
   render() {
     return (
@@ -31,7 +47,8 @@ class Cart extends Component {
               </div>
             );
           })}
-          <div>{/* <Checkout /> */}</div>
+          <div>Total: {this.state.total}</div>
+          <div><Checkout total={this.state.total}/></div>
         </div>
       </div>
     );

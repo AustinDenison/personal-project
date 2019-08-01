@@ -49,10 +49,6 @@ class Login extends Component {
 }
 
 function mapStateToProps(state) {
-<<<<<<< HEAD
-    console.log(state.user)
-=======
->>>>>>> 83a29f28b0cad2164bb26e8f9d2c40f2b9fd4685
     return state.user
 }
 

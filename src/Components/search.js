@@ -71,7 +71,7 @@ class Search extends Component {
       });
     } else {
       display = this.props.queries.map(laptop => {
-        return <FilteredLaptop queries={laptop} key={laptop.laptop_id} />;
+        return <FilteredLaptop laptop={laptop} key={laptop.laptop_id} />;
       });
     }
     return (

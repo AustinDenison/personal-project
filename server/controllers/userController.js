@@ -37,8 +37,6 @@ module.exports = {
     logout(req, res) {
         req.session.destroy()
         res.sendStatus(200)
-<<<<<<< HEAD
-=======
     },
     async editUser(req, res) {
         const db = req.app.get('db')
@@ -46,6 +44,5 @@ module.exports = {
 
         let editedUser = await db.edit_user(username, id)
         res.status(200).send(editedUser)
->>>>>>> 83a29f28b0cad2164bb26e8f9d2c40f2b9fd4685
     }
 }
