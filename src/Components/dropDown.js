@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import './dropDown.css'
-import axios from 'axios'
 import {logout} from '../redux/userReducer'
+import EditUser from './editUser'
+import {Link} from 'react-router-dom'
 
 class DropDown extends Component {
   constructor() {
@@ -19,12 +20,21 @@ class DropDown extends Component {
     });
   };
 
+
+  handleLogout = () => {
+    this.props.logout()
+ 
+  }
+
   render() {
     let dropDown = [];
     if (this.state.dropdown === true) {
        dropDown.push(
         <div className="dropdown-content">
-          <div className='logout' onClick={this.props.logout}>Logout</div>
+          <Link to="/">
+          <div className='logout' onClick={() => {this.handleLogout()}}>Logout</div>
+          </Link>
+          <EditUser />
         </div>
       );
     }

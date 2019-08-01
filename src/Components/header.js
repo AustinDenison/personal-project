@@ -6,6 +6,10 @@ import Signup from "./signup";
 import { connect } from 'react-redux';
 import DropDown from './dropDown'
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 83a29f28b0cad2164bb26e8f9d2c40f2b9fd4685
 class Header extends Component {
   constructor() {
     super();

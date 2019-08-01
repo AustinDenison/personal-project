@@ -116,12 +116,21 @@ class Search extends Component {
           </select>
           <select defaultValue='Choose Video Card'>
             <option disabled>Choose Video Card</option>
+            <option>Intel HD</option>
+            <option>AMD Radeon</option>
           </select>
           <select defaultValue='Choose Memory'>
             <option disabled>Choose Memory</option>
+            <option>2GB</option>
+            <option>4GB</option>
+            <option>8GB</option>
+            <option>16GB</option>
+            <option>32GB</option>
           </select>
           <select defaultValue='Choose Storage'>
             <option disabled>Choose Storage</option>
+            <option>HDD</option>
+            <option>SSD</option>
           </select>
           <select defaultValue='Choose Price'>
             <option disabled>Choose Price</option>
@@ -132,8 +141,8 @@ class Search extends Component {
         <div className="compare">
           <h3>Compare</h3>
           <div>
-            {this.props.compare.map(compare => {
-              return <Compare compare={compare} />;
+            {this.props.compare.map(laptop => {
+              return <Compare laptop={laptop} key={laptop.laptop_id} />;
             })}
           </div>
           <button

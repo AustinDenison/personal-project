@@ -11,7 +11,11 @@ class FilteredLaptop extends Component {
     }
 
     render(){
+<<<<<<< HEAD
         const {model, display, processor, video_card, memory, storage, battery, weight, price, image} = this.props.queries
+=======
+        const {model, price, image} = this.props.queries
+>>>>>>> 83a29f28b0cad2164bb26e8f9d2c40f2b9fd4685
         return(
             <div className='laptop-container'>
                 <div className='image-container'>
