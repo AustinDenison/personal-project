@@ -14,18 +14,18 @@ class Laptop extends Component {
     }
 
     render() {
-        const {model, price, image, laptop_id} = this.props.laptop
+        const {model, price, image, laptop_id, brand} = this.props.laptop
         return(
             <div className='laptop-container'>
                 <div className='image-container'>
                 <img  className='laptopImage' src={image} alt='item'></img>
                 </div>
                 <div className='spec'>
-                <h5>{model}</h5>
+                <h5>{brand} {model}</h5>
                 <p className='price'>${price}</p>
-                <div>
-                <button onClick={() => this.handleCompare(this.props.laptop)}>Compare</button>
-                <button onClick={() => this.handleAdd(laptop_id)}>Add To Cart</button>
+                <div className='btn-container'>
+                <button className='btn' onClick={() => this.handleCompare(this.props.laptop)}>Compare</button>
+                <button className='btn' onClick={() => this.handleAdd(laptop_id)}>Add To Cart</button>
                 </div>
                 </div>
             </div>

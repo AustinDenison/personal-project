@@ -1,54 +1,101 @@
 .search-container {
     display: flex;
     height: 1000px;
-    background: linear-gradient(#FCFFFC, #D1FAFF );
+    background: linear-gradient( #CFE8EF, #A491D3 );
 }
 
 .search {
     width: 15%;
-    height: 800px;
-    background: linear-gradient(to bottom right, #D1FAFF, #8DE0C3 );
+    height: 700px;
+    background: #424C55;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    border: solid;
+    justify-content: flex-start;
+    border: solid 1px #8888;
     border-radius: 10px;
     margin-left: 1px;
     margin-top: 10px;
-    align-items: center;
+    
+
 }
 
 select {
-    background: linear-gradient(to bottom right, #DEC5E3, #D1FAFF );
-    color: black;
-    border-radius: 20px;
+    background: #29274C;
+    color: #CFE8EF;
     border: none;
     height: 40px;
     outline: none;
-    width: 98%;
-    background-color: #D1FAFF;
+    width: 99%;
+    background-color: #424C55;
+    outline: none;
+    display: flex;
+    font-size: 1.2rem;
+    padding-left: 7px;
+    margin-top: 50px;
+}
+
+.filter-btn {
+    font-size: 17px;
+    width: 70px;
+    border-radius: 5px;
+    border: solid 1px #8888;
+    background: #CFE8EF;
+    position: absolute;
+    bottom: -20px;
+    left: 145px;
 }
 
 .laptops {
     width: 70%;
     height: 100%;
-    background: linear-gradient(#FCFFFC, #D1FAFF );
+    background: linear-gradient( #CFE8EF, #A491D3 );
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.no-wrap-laptops {
+    width: 70%;
+    height: 100%;
+    background: linear-gradient( #CFE8EF, #A491D3 );
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    align-content: flex-start;
 }
 
 .compare {
     width: 15%;
     height: 300px;
-    background:linear-gradient(#DEC5E3, #FCFFFC );
-    border: solid;
+    background: #424C55;
+    border: solid 1px #8888;
     display: flex;
     flex-direction: column;
     border-radius: 10px;
     margin-right: 1px;
     margin-top: 10px;
+    color: #CFE8EF;
+    align-items: center;
+}
+
+.model-container {
+    width: 100%;
+}
+
+h3 {
+    font-size: 1.4rem;
 }
 
 .toggle-compare{
-    margin-top: 50px;
+    position: absolute;
+    bottom: 380px;
+    border-radius: 5px;
+    border: solid 1px #8888;
+    font-size: 15px;
+    height: 30px;
+    background: #CFE8EF;
+    color: black;
+    right: 15px;
+    outline: none;
 }

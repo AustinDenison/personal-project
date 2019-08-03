@@ -1,6 +1,6 @@
 .frontPage {
     height: 1100px;
-    background: #DEEAE4;
+    background: linear-gradient( #CFE8EF, #A491D3 );
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -21,7 +21,7 @@
 .article-container {
     width: 80%;
     height: 500px;
-    background-color: #DEC5E3;
+    /* background-color: #DEC5E3; */
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -30,4 +30,5 @@
 .article {
     width: 20%;
     border: solid;
+    box-shadow: 0px 0px 10px 0px #000000;
 }

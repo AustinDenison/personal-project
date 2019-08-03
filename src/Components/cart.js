@@ -47,8 +47,10 @@ class Cart extends Component {
               </div>
             );
           })}
-          <div>Total: {this.state.total}</div>
-          <div><Checkout total={this.state.total}/></div>
+          <div className='checkout-container'>
+          <div className='total'>Total: ${this.state.total}</div>
+          <div className='checkout-btn'><Checkout total={this.state.total}/></div>
+          </div>
         </div>
       </div>
     );

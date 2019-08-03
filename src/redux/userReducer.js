@@ -9,7 +9,6 @@ const initialState = {
     queries: [],
     compare: [],
     displayCompare: false
-
 }
 
 export const deleteCompare = (laptop_id) => {

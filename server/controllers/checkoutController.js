@@ -2,9 +2,8 @@ const stripe = require('stripe')(process.env.REACT_APP_SECRET_KEY)
 
 module.exports = {
     pay:(req,res)=>{
-        // const db = req.app.get('db')
-        const {token:{id},amount} = req.body;
-        console.log(id,amount,stripe)
+        let {token:{id},amount} = req.body;
+        amount *= 100
         stripe.charges.create(
             {
                 amount:amount,
@@ -18,7 +17,6 @@ module.exports = {
                     return res.status(500).send(err)
                 } else {
                     console.log('Successful payment',charge)
-                    //this is where you would do something with that purchase (i.e. store that information to your db)
                     return res.status(200).send(charge)
                 }
             }

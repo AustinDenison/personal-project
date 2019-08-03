@@ -20,6 +20,7 @@
     "redux": "^4.0.4",
     "redux-persist": "^5.10.0",
     "redux-promise-middleware": "^6.1.1",
+    "stripe": "^7.5.4",
     "styled-components": "^4.3.2"
   },
   "scripts": {

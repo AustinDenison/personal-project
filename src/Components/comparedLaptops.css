@@ -8,7 +8,11 @@
     height: 300px;
     background-color: white;
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
+    margin-top: 10px;
+    border-bottom: solid 2px #8888;
+    border-top: solid 2px #8888;
 }
 
 .compare-laptops {
@@ -17,6 +21,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 20px;
 }
 
 .laptopImage {
@@ -26,6 +31,7 @@
 
 h5 {
     font-size: 20px;
+    padding-top: 30px;
 }
 
 .price {
@@ -37,6 +43,14 @@ h5 {
     height: 700px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
+}
+
+.compared-spec {
+    margin-top: 50px;
+    font-size: 20px;
+    border-bottom: solid 2px #8888;
+    width: 70%;
+    margin-left: 150px;
+    padding-bottom: 10px;
 }

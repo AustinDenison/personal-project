@@ -1,4 +1,19 @@
 .mini-compare {
     border-bottom: solid;
     border-top: solid;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+}
+
+.delete-compare {
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    color: #CFE8EF;
+    
 }

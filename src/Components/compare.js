@@ -10,11 +10,11 @@ class Compare extends Component {
     }
 
     render(){
-        const {model, laptop_id} = this.props.laptop
+        const {model, laptop_id, brand} = this.props.laptop
         return(
             <div className='mini-compare'>
-                {model}
-                <button onClick={() => this.deleteCompare(laptop_id)}>x</button>
+                {brand} {model}
+                <button className='delete-compare' onClick={() => this.deleteCompare(laptop_id)}>x</button>
             </div>
         )
     }

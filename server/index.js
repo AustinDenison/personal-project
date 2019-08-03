@@ -5,8 +5,7 @@ const session = require('express-session')
 const initSession = require('./middleware/initSession')
 const uc = require('./controllers/userController')
 const lc = require('./controllers/laptopController')
-// const cc = require('./controllers/checkoutController')
-const authCheck = require('./middleware/authCheck');
+const cc = require('./controllers/checkoutController')
 const {CONNECTION_STRING, SESSION_SECRET, SERVER_PORT} = process.env
 
 const app = express()
@@ -32,7 +31,7 @@ app.get('/api/laptops', lc.getAll)
 app.post('/api/laptop', lc.addLaptop)
 app.post('/api/laptops/:laptop_id', lc.deleteItem)
 
-// app.post('/api/payment', cc.pay)
+app.post('/api/payment', cc.pay)
 
 
 massive(CONNECTION_STRING).then(db => {

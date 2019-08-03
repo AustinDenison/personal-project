@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import { connect } from "react-redux";
 import {compareLaptop, addToCart} from "../redux/userReducer"
+import './laptop.css'
 
 class FilteredLaptop extends Component {
 
@@ -22,9 +23,9 @@ class FilteredLaptop extends Component {
                 <div className='spec'>
                 <h5>{model}</h5>
                 <p className='price'>${price}</p>
-                <div>
-                <button onClick={() => this.handleCompare(this.props.queries)}>Compare</button>
-                <button onClick={() => this.handleAdd(laptop_id)}>Add To Cart</button>
+                <div className='btn-container'>
+                <button className='btn' onClick={() => this.handleCompare(this.props.laptop)}>Compare</button>
+                <button className='btn' onClick={() => this.handleAdd(laptop_id)}>Add To Cart</button>
                 </div>
                 </div>
             </div>

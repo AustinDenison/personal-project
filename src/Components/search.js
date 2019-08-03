@@ -105,21 +105,23 @@ class Search extends Component {
             <option>15-16 inches</option>
             <option>17-18 inches</option>
           </select>
-          <select defaultValue="Choose Processor">
+          <select defaultValue="Choose Processor" onChange={this.changeFunc} name="processor">
             <option disabled>Choose Processor</option>
-            <option>Intel Core i3</option>
-            <option>Intel Core i5</option>
-            <option>Intel Core i7</option>
-            <option>Intel Core i9</option>
+            <option>Intel i5</option>
+            <option>Intel i7</option>
+            <option>Intel i9</option>
             <option>Ryzen 5</option>
             <option>Ryzen 7</option>
           </select>
-          <select defaultValue='Choose Video Card'>
+          <select defaultValue='Choose Video Card' onChange={this.changeFunc} name="video_card">
             <option disabled>Choose Video Card</option>
             <option>Intel HD</option>
+            <option>Intel UHD</option>
+            <option>Intel Iris Plus</option>
             <option>AMD Radeon</option>
+            <option>NAVIDA GeForce</option>
           </select>
-          <select defaultValue='Choose Memory'>
+          <select defaultValue='Choose Memory' onChange={this.changeFunc} name="memory">
             <option disabled>Choose Memory</option>
             <option>2GB</option>
             <option>4GB</option>
@@ -127,20 +129,17 @@ class Search extends Component {
             <option>16GB</option>
             <option>32GB</option>
           </select>
-          <select defaultValue='Choose Storage'>
+          <select defaultValue='Choose Storage' onChange={this.changeFunc} name="storage">
             <option disabled>Choose Storage</option>
             <option>HDD</option>
             <option>SSD</option>
           </select>
-          <select defaultValue='Choose Price'>
-            <option disabled>Choose Price</option>
-          </select>
-          <button onClick={this.filter}>Filter</button>
+          <button className='filter-btn' onClick={this.filter}>Filter</button>
         </div>
-        <div className="laptops">{display}</div>
+        <div className={this.props.displayCompare ? 'no-wrap-laptops' : 'laptops'}>{display}</div>
         <div className="compare">
           <h3>Compare</h3>
-          <div>
+          <div className='model-container'>
             {this.props.compare.map(laptop => {
               return <Compare laptop={laptop} key={laptop.laptop_id} />;
             })}

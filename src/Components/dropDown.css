@@ -1,15 +1,16 @@
 .dropBtn {
     font-size: 25px;
-    color: black;
+    color: #CFE8EF;
 }
 
 .dropdown-content {
-    width: 230px;
+    width: 220px;
     height: 70px;
     background: black;
     color: white;
     position: absolute;
     top: 80px;
+    right: 10px;
 }
 
 .logout {

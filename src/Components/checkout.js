@@ -12,11 +12,10 @@ class Checkout extends Component {
 
     onToken = (token) => {
       let { amount } = this.state
-      amount *= 100
       token.card = void 0
-      axios.post('/api/payment', { token, amount: this.state.amount }).then(res => {
+      axios.post('/api/payment', { token, amount }).then(res => {
         console.log(res)
-        alert(`Congratulations you wasted ${amount}!`)
+        alert(`Congratulations you wasted $${amount}!`)
       })
       }
      

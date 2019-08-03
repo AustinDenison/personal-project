@@ -1,36 +1,36 @@
 .header {
     height: 80px;
-    background: linear-gradient(to bottom right, #D1FAFF, #8DE0C3 );
+    background: #424C55;
     display: flex;
     justify-content: space-around;
     color: white;
     align-items: center;
-    border-bottom: solid black
+    border-bottom: solid 2px black;
 }
 
 .logo-link {
     font-size: 30px;
     text-decoration: none;
-    color: black;
+    color: #CFE8EF;
 }
 
 .search-link {
     font-size: 25px;
     text-decoration: none;
-    color: black;
+    color: #CFE8EF;
 }
 
 .cart-link {
     font-size: 25px;
     text-decoration: none;
-    color: black;
+    color: #CFE8EF;
 }
 
 .login-btn {
     width: 100px;
     height: 40px;
     font-size: 20px;
-    color: black;
+    color: #CFE8EF;
     background-color: transparent;
     border: none;
     outline: none;
