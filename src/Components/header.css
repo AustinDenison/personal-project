@@ -12,18 +12,21 @@
     font-size: 30px;
     text-decoration: none;
     color: #CFE8EF;
+    font-family: 'Poppins', sans-serif;
 }
 
 .search-link {
     font-size: 25px;
     text-decoration: none;
     color: #CFE8EF;
+    font-family: 'Poppins', sans-serif;
 }
 
 .cart-link {
     font-size: 25px;
     text-decoration: none;
     color: #CFE8EF;
+    font-family: 'Poppins', sans-serif;
 }
 
 .login-btn {
@@ -34,4 +37,5 @@
     background-color: transparent;
     border: none;
     outline: none;
+    font-family: 'Poppins', sans-serif;
 }

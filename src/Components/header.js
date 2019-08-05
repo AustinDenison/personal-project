@@ -42,7 +42,7 @@ class Header extends Component {
   render() {
     return (
       <div className="header">
-        <Link className='logo-link' to="/">Logo</Link>
+        <Link className='logo-link' to="/">Laptopia</Link>
         <Link className='search-link' to="/search">Search</Link>
         <Link className='cart-link' to="/cart">Cart</Link>
         {

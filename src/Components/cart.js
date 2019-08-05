@@ -37,7 +37,7 @@ class Cart extends Component {
                 </div>
                 <div className="item-info">
                   <h5>{item.model}</h5>
-                  <p className="p">${item.price}</p>
+                  <p className="checkout-price">${item.price}</p>
                   <div className='delete-btn'>
                     <button className='x' onClick={() => this.handleDelete(item.laptop_id)}>
                       x

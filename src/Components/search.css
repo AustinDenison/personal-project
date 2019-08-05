@@ -32,6 +32,7 @@ select {
     font-size: 1.2rem;
     padding-left: 7px;
     margin-top: 50px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .filter-btn {
@@ -77,6 +78,7 @@ select {
     margin-top: 10px;
     color: #CFE8EF;
     align-items: center;
+    font-family: 'Poppins', sans-serif;
 }
 
 .model-container {
@@ -85,6 +87,7 @@ select {
 
 h3 {
     font-size: 1.4rem;
+    font-family: 'Poppins', sans-serif;
 }
 
 .toggle-compare{
