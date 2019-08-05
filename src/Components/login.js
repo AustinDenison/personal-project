@@ -39,10 +39,11 @@ class Login extends Component {
         return(
             <div className='login'>
                 <h4 className='title-login'>Login</h4>
-                <input placeholder='username' onChange={e => this.handleUsername(e.target.value)} />
-                <input placeholder='password' type='password' onChange={e => this.handlePassword(e.target.value)} />
-                <button onClick={() => this.handleLogin()}>Login</button>
-                <button onClick={() => this.handleSwitch()}>Signup</button>
+                <input className='username-input' placeholder='username' onChange={e => this.handleUsername(e.target.value)} />
+                <input className='password-input' placeholder='password' type='password' onChange={e => this.handlePassword(e.target.value)} />
+                <button className='loginBtn' onClick={() => this.handleLogin()}>Login</button>
+                <p className='or'>or</p>
+                <button className='signupBtn' onClick={() => this.handleSwitch()}>Signup</button>
             </div>
         )
     }

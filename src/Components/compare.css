@@ -14,6 +14,16 @@
     border: none;
     outline: none;
     font-size: 20px;
-    color: #CFE8EF;
-    
+    color: #CFE8EF; 
+}
+
+@media (max-width:1366px) {
+    .delete-compare {
+        background: transparent;
+        border: none;
+        outline: none;
+        font-size: 20px;
+        color: #CFE8EF;
+        margin-right: 20px; 
+    }
 }

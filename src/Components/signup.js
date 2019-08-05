@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import './signup.css'
 import { connect } from 'react-redux';
 import {signup} from '../redux/userReducer'
+import './login.css'
 
 class Signup extends Component {
     constructor(){
@@ -35,11 +36,11 @@ class Signup extends Component {
     render(){
         return(
             <div className='signup'>
-                <h4>Signup</h4>
-                <input placeholder='username' onChange={e => this.handleUsername(e.target.value)} />
-                <input placeholder='email' onChange={e => this.handleEmail(e.target.value)} />
-                <input placeholder='password' onChange={e => this.handlePassword(e.target.value)} />
-                <button onClick={() => this.props.signup(this.state.username, this.state.email, this.state.password)}>Signup</button>
+                <h4 className='title-signup'>Signup</h4>
+                <input className='username-input' placeholder='username' onChange={e => this.handleUsername(e.target.value)} />
+                <input className='email-input' placeholder='email' onChange={e => this.handleEmail(e.target.value)} />
+                <input className='password-input' placeholder='password' onChange={e => this.handlePassword(e.target.value)} />
+                <button className='signupBtn' onClick={() => this.props.signup(this.state.username, this.state.email, this.state.password)}>Signup</button>
             </div>
         )
     }

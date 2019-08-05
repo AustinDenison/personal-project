@@ -36,7 +36,7 @@ class Cart extends Component {
                   <img className="item-img" src={item.image} alt="item" />
                 </div>
                 <div className="item-info">
-                  <h5>{item.model}</h5>
+                  <h5 className='item-model'>{item.model}</h5>
                   <p className="checkout-price">${item.price}</p>
                   <div className='delete-btn'>
                     <button className='x' onClick={() => this.handleDelete(item.laptop_id)}>

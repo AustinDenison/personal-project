@@ -9,7 +9,7 @@ class ComparedLaptops extends Component {
             <div className="top-container">
               <div className="compare-laptops">
                 <img src={image} alt="item" className="laptopImage" />
-                <h5>{model}</h5>
+                <h5 className='l-model'>{model}</h5>
                 <div className="price">${price}</div>
               </div>
             </div>

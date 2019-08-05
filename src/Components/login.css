@@ -1,7 +1,7 @@
 .login {
     width: 300px;
     height: 500px;
-    background-color: grey;
+    background: linear-gradient( #CFE8EF, #A491D3 );
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -20,4 +20,44 @@
     border-bottom: solid;
     padding-bottom: 5px;
     padding-left: 10px;
+    color: #424C55;
+    font-family: 'Poppins', sans-serif;
+}
+
+.username-input {
+    margin-bottom: 10px;
+    width: 70%;
+    height: 20px;
+}
+
+.password-input {
+    margin-bottom: 20px;
+    width: 70%;
+    height: 20px;
+}
+
+.loginBtn {
+    margin-bottom: 10px;
+    width: 50%;
+    border-radius: 20px;
+    border: solid 1px #8888;
+    font-size: 20px;
+    background-color: #29274C;
+    color: white;
+    height: 30px;
+}
+
+.or {
+    margin-bottom: 10px;
+    margin-top: 0px;
+}
+
+.signupBtn {
+    width: 50%;
+    border-radius: 20px;
+    border: solid 1px #8888;
+    font-size: 20px;
+    background-color: #29274C;
+    color: white;
+    height: 30px;
 }

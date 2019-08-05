@@ -42,8 +42,9 @@ select {
     border: solid 1px #8888;
     background: #CFE8EF;
     position: absolute;
-    bottom: -20px;
+    bottom: -30px;
     left: 145px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .laptops {
@@ -88,11 +89,14 @@ select {
 h3 {
     font-size: 1.4rem;
     font-family: 'Poppins', sans-serif;
+    border-bottom: solid 2px #8888;
+    padding-right: 80px;
+    padding-bottom: 5px;
 }
 
 .toggle-compare{
     position: absolute;
-    bottom: 380px;
+    bottom: 370px;
     border-radius: 5px;
     border: solid 1px #8888;
     font-size: 15px;
@@ -101,4 +105,107 @@ h3 {
     color: black;
     right: 15px;
     outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+@media (max-width:1366px) {
+    .filter-btn {
+        font-size: 17px;
+        width: 70px;
+        border-radius: 5px;
+        border: solid 1px #8888;
+        background: #CFE8EF;
+        position: absolute;
+        bottom: 250px;
+        left: 125px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .compare {
+        width: 15%;
+        height: 300px;
+        background: #424C55;
+        border: solid 1px #8888;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        margin-right: 1px;
+        margin-top: 10px;
+        color: #CFE8EF;
+        align-items: center;
+        font-family: 'Poppins', sans-serif;
+        margin-right: 44px;
+    }
+
+    .toggle-compare{
+        position: absolute;
+        bottom: 650px;
+        border-radius: 5px;
+        border: solid 1px #8888;
+        font-size: 15px;
+        height: 30px;
+        background: #CFE8EF;
+        color: black;
+        right: 55px;
+        outline: none;
+        font-family: 'Poppins', sans-serif;
+    }
+}
+
+@media (max-width: 1024px) {
+    .filter-btn {
+        font-size: 17px;
+        width: 70px;
+        border-radius: 5px;
+        border: solid 1px #8888;
+        background: #CFE8EF;
+        position: absolute;
+        bottom: 590px;
+        left: 70px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .compare {
+        width: 15%;
+        height: 300px;
+        background: #424C55;
+        border: solid 1px #8888;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        margin-right: 1px;
+        margin-top: 10px;
+        color: #CFE8EF;
+        align-items: center;
+        font-family: 'Poppins', sans-serif;
+        margin-right: 4px;
+    }
+
+    .toggle-compare{
+        position: absolute;
+        bottom: 990px;
+        border-radius: 5px;
+        border: solid 1px #8888;
+        font-size: 15px;
+        height: 30px;
+        background: #CFE8EF;
+        color: black;
+        right: 10px;
+        outline: none;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+        font-family: 'Poppins', sans-serif;
+        border-bottom: none;
+        padding-bottom: 5px;
+        padding-left: 40px;
+    }
+
+    .search-container {
+        display: flex;
+        height: 100vh;
+        background: linear-gradient( #CFE8EF, #A491D3 );
+    }
 }

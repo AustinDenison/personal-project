@@ -31,7 +31,7 @@ class DropDown extends Component {
     if (this.state.dropdown === true) {
        dropDown.push(
         <div className="dropdown-content">
-          <Link to="/">
+          <Link className='logout-link' to="/">
           <div className='logout' onClick={() => {this.handleLogout()}}>Logout</div>
           </Link>
           <EditUser />

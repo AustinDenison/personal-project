@@ -26,8 +26,8 @@ class EditUserDisplay extends Component {
         return (
             <div className='edit-user'>
                 <h4 className='title-edit'>Edit User</h4>
-                <input placeholder='New Username' onChange={e => this.handleChange(e.target.value)}></input>
-                <button onClick={() => this.handleEdit(this.state.newUsername, this.props.user.id)} >Edit Username</button>
+                <input className='username-input' placeholder='New Username' onChange={e => this.handleChange(e.target.value)}></input>
+                <button className='change-username' onClick={() => this.handleEdit(this.state.newUsername, this.props.user.id)} >Edit</button>
             </div>
         )
     }

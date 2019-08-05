@@ -20,7 +20,7 @@ class EditUser extends Component {
         return (
             <div>
               {this.state.toggleEdit ? <EditUserDisplay /> : null}
-              <div onClick={this.toggleEdit}>Edit User</div>
+              <div className='edit-user-btn' onClick={this.toggleEdit}>Edit User</div>
             </div>
         )
     }

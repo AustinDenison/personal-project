@@ -9,7 +9,7 @@
 }
 
 .logo-link {
-    font-size: 30px;
+    font-size: 35px;
     text-decoration: none;
     color: #CFE8EF;
     font-family: 'Poppins', sans-serif;
@@ -20,6 +20,7 @@
     text-decoration: none;
     color: #CFE8EF;
     font-family: 'Poppins', sans-serif;
+    margin-left: 350px;
 }
 
 .cart-link {
@@ -32,7 +33,7 @@
 .login-btn {
     width: 100px;
     height: 40px;
-    font-size: 20px;
+    font-size: 25px;
     color: #CFE8EF;
     background-color: transparent;
     border: none;
