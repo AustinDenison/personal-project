@@ -36,6 +36,19 @@ select:hover {
     background-color: black;
 }
 
+.reset-btn {
+    font-size: 17px;
+    width: 70px;
+    border-radius: 5px;
+    border: solid 1px #8888;
+    background: #CFE8EF;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    position: absolute;
+    bottom: -30px;
+    left: 15px;
+}
+
 .filter-btn {
     font-size: 17px;
     width: 70px;
@@ -129,6 +142,19 @@ h3 {
 }
 
 @media (max-width:1366px) {
+    .reset-btn {
+        font-size: 17px;
+        width: 70px;
+        border-radius: 5px;
+        border: solid 1px #8888;
+        background: #CFE8EF;
+        font-family: 'Poppins', sans-serif;
+        outline: none;
+        position: absolute;
+        bottom: 250px;
+        left: 15px;
+    }
+
     .filter-btn {
         font-size: 17px;
         width: 70px;
@@ -173,6 +199,19 @@ h3 {
 }
 
 @media (max-width: 1024px) {
+    .reset-btn {
+        font-size: 17px;
+        width: 70px;
+        border-radius: 5px;
+        border: solid 1px #8888;
+        background: #CFE8EF;
+        font-family: 'Poppins', sans-serif;
+        outline: none;
+        position: absolute;
+        bottom: 590px;
+        left: 5px;
+    }
+
     .filter-btn {
         font-size: 17px;
         width: 70px;
@@ -181,7 +220,7 @@ h3 {
         background: #CFE8EF;
         position: absolute;
         bottom: 590px;
-        left: 70px;
+        left: 80px;
         font-family: 'Poppins', sans-serif;
     }
 

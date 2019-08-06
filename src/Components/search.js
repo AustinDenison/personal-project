@@ -7,7 +7,8 @@ import { connect } from "react-redux";
 import {
   setLaptops,
   filteredLaptop,
-  toggleCompare
+  toggleCompare,
+  reset
 } from "../redux/userReducer";
 import Compare from "./compare";
 import ComparedLaptops from "./comparedLaptops";
@@ -55,6 +56,10 @@ class Search extends Component {
   displayCompare = () => {
     this.props.toggleCompare();
   };
+
+  handleReset = () => {
+    this.props.reset()
+  }
 
   render() {
     let display = [];
@@ -134,6 +139,7 @@ class Search extends Component {
             <option>1000GB HDD</option>
             <option>256GB SSD</option>
           </select>
+          <button className='reset-btn' onClick={this.handleReset}>Reset</button>
           <button className='filter-btn' onClick={this.filter}>Filter</button>
         </div>
         <div className={this.props.displayCompare ? 'no-wrap-laptops' : 'laptops'}>{display}</div>
@@ -162,5 +168,5 @@ function mapStateToProps(state) {
 
 export default connect(
   mapStateToProps,
-  { setLaptops, filteredLaptop, toggleCompare }
+  { setLaptops, filteredLaptop, toggleCompare, reset }
 )(Search);
