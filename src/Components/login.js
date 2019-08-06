@@ -37,6 +37,7 @@ class Login extends Component {
 
     render(){
         return(
+            <div className='overlay'>
             <div className='login'>
                 <h4 className='title-login'>Login</h4>
                 <input className='username-input' placeholder='username' onChange={e => this.handleUsername(e.target.value)} />
@@ -44,6 +45,7 @@ class Login extends Component {
                 <button className='loginBtn' onClick={() => this.handleLogin()}>Login</button>
                 <p className='or'>or</p>
                 <button className='signupBtn' onClick={() => this.handleSwitch()}>Signup</button>
+            </div>
             </div>
         )
     }

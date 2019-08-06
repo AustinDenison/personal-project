@@ -35,12 +35,14 @@ class Signup extends Component {
 
     render(){
         return(
+            <div className='overlay'>
             <div className='signup'>
                 <h4 className='title-signup'>Signup</h4>
                 <input className='username-input' placeholder='username' onChange={e => this.handleUsername(e.target.value)} />
                 <input className='email-input' placeholder='email' onChange={e => this.handleEmail(e.target.value)} />
                 <input className='password-input' placeholder='password' onChange={e => this.handlePassword(e.target.value)} />
                 <button className='signupBtn' onClick={() => this.props.signup(this.state.username, this.state.email, this.state.password)}>Signup</button>
+            </div>
             </div>
         )
     }
