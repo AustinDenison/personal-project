@@ -15,5 +15,5 @@ const rootReducer = combineReducers({
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)
 
-export let store = createStore(persistedReducer, window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__(applyMiddleware(promiseMiddleware)) || applyMiddleware(promiseMiddleware)) 
+export let store = createStore(persistedReducer, applyMiddleware(promiseMiddleware)) 
 export let persistor = persistStore(store)
