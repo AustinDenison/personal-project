@@ -100,10 +100,10 @@ class Search extends Component {
             onChange={this.changeFunc}
           >
             <option disabled>Choose Display</option>
-            <option>10-12 inches</option>
-            <option>13-14 inches</option>
-            <option>15-16 inches</option>
-            <option>17-18 inches</option>
+            <option>12.3</option>
+            <option>13.3</option>
+            <option>14</option>
+            <option>15.6</option>
           </select>
           <select defaultValue="Choose Processor" onChange={this.changeFunc} name="processor">
             <option disabled>Choose Processor</option>
@@ -131,8 +131,8 @@ class Search extends Component {
           </select>
           <select defaultValue='Choose Storage' onChange={this.changeFunc} name="storage">
             <option disabled>Choose Storage</option>
-            <option>HDD</option>
-            <option>SSD</option>
+            <option>1000GB HDD</option>
+            <option>256GB SSD</option>
           </select>
           <button className='filter-btn' onClick={this.filter}>Filter</button>
         </div>

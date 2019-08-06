@@ -12,7 +12,6 @@
     display: flex;
     flex-direction: column;
     margin-top: 50px;
-    /* align-items: center; */
 }
 
 .item {
@@ -51,9 +50,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
-h5 {
+.item-model {
     font-size: 40px;
-    margin: 0px;
+    font-weight: bold;
+    margin-top: 25px;
 }
 
 .checkout-price {
@@ -69,6 +69,7 @@ h5 {
     background: transparent;
     border: none;
     font-size: 25px;
+    outline: none;
 }
 
 .checkout-container {

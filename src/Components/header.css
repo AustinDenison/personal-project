@@ -13,6 +13,11 @@
     text-decoration: none;
     color: #CFE8EF;
     font-family: 'Poppins', sans-serif;
+    transition: all .2s ease-in-out;
+}
+
+.logo-link:hover {
+    transform: scale(1.1);
 }
 
 .search-link {
@@ -21,6 +26,11 @@
     color: #CFE8EF;
     font-family: 'Poppins', sans-serif;
     margin-left: 350px;
+    transition: all .2s ease-in-out;
+}
+
+.search-link:hover {
+    transform: scale(1.1);
 }
 
 .cart-link {
@@ -28,6 +38,11 @@
     text-decoration: none;
     color: #CFE8EF;
     font-family: 'Poppins', sans-serif;
+    transition: all .2s ease-in-out;
+}
+
+.cart-link:hover {
+    transform: scale(1.1);
 }
 
 .login-btn {
@@ -39,4 +54,9 @@
     border: none;
     outline: none;
     font-family: 'Poppins', sans-serif;
+    transition: all .2s ease-in-out;
+}
+
+.login-btn:hover {
+    transform: scale(1.1)
 }

@@ -3,13 +3,13 @@ import './comparedLaptops.css'
 
 class ComparedLaptops extends Component {
     render(){
-        const {model, display, processor, video_card, memory, storage, battery, weight, price, image} = this.props.compare
+        const {model, display, processor, video_card, memory, storage, battery, weight, price, image, brand} = this.props.compare
         return (
           <div className='display-compare'>
             <div className="top-container">
               <div className="compare-laptops">
                 <img src={image} alt="item" className="laptopImage" />
-                <h5 className='l-model'>{model}</h5>
+                <div className='l-model'>{brand} {model}</div>
                 <div className="price">${price}</div>
               </div>
             </div>

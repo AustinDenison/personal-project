@@ -21,7 +21,7 @@ class FilteredLaptop extends Component {
                 <img src={image} alt='item' className='laptopImage'></img>
                 </div>
                 <div className='spec'>
-                <h5 className='l-model'>{brand} {model}</h5>
+                <div className='l-model'>{brand} {model}</div>
                 <p className='price'>${price}</p>
                 <div className='btn-container'>
                 <button className='btn' onClick={() => this.handleCompare(this.props.laptop)}>Compare</button>

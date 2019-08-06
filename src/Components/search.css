@@ -1,6 +1,6 @@
 .search-container {
     display: flex;
-    height: 1000px;
+    height: 1500px;
     background: linear-gradient( #CFE8EF, #A491D3 );
 }
 
@@ -15,12 +15,9 @@
     border-radius: 10px;
     margin-left: 1px;
     margin-top: 10px;
-    
-
 }
 
 select {
-    background: #29274C;
     color: #CFE8EF;
     border: none;
     height: 40px;
@@ -35,6 +32,10 @@ select {
     font-family: 'Poppins', sans-serif;
 }
 
+select:hover {
+    background-color: black;
+}
+
 .filter-btn {
     font-size: 17px;
     width: 70px;
@@ -45,6 +46,16 @@ select {
     bottom: -30px;
     left: 145px;
     font-family: 'Poppins', sans-serif;
+    outline: none;
+}
+
+.filter-btn:hover {
+    font-weight: bold;
+}
+
+.filter-btn:active {
+    transform: translateY(1px);
+    filter: saturate(150%);
 }
 
 .laptops {
@@ -106,6 +117,15 @@ h3 {
     right: 15px;
     outline: none;
     font-family: 'Poppins', sans-serif;
+}
+
+.toggle-compare:hover {
+    font-weight: bold;
+}
+
+.toggle-compare:active {
+    transform: translateY(1px);
+    filter: saturate(150%);
 }
 
 @media (max-width:1366px) {

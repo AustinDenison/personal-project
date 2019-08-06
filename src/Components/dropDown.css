@@ -2,6 +2,11 @@
     font-size: 25px;
     color: #CFE8EF;
     font-family: 'Poppins', sans-serif;
+    transition: all .2s ease-in-out;
+}
+
+.dropBtn:hover {
+    transform: scale(1.1);
 }
 
 .dropdown-content {
@@ -21,6 +26,11 @@
     margin-top: 5px;
 }
 
+.logout:active {
+    transform: translateY(1px);
+    filter: saturate(150%);
+}
+
 .logout-link {
     text-decoration: none;
     color: #CFE8EF;
@@ -31,3 +41,9 @@
     padding-left: 10px;
     margin-top: 5px;
 }
+
+.edit-user-btn:active {
+    transform: translateY(1px);
+    filter: saturate(150%);
+}
+
