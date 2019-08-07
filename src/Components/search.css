@@ -49,6 +49,15 @@ select:hover {
     left: 15px;
 }
 
+.reset-btn:hover {
+    font-weight: bold;
+}
+
+.reset-btn:active {
+    transform: translateY(1px);
+    filter: saturate(150%);
+}
+
 .filter-btn {
     font-size: 17px;
     width: 70px;
